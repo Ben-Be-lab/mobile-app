@@ -7,23 +7,19 @@ import { ThemedView } from '@/components/themed-view';
 export default function ModalScreen() {
   return (
     <ThemedView style={styles.container}>
-      <ThemedText type="title">This is a modal</ThemedText>
-      <Link href="/" dismissTo style={styles.link}>
-        <ThemedText type="link">Go to home screen</ThemedText>
+      {/* A nice icon placeholder */}
+      <ThemedView style={styles.iconCircle}>
+        <ThemedText style={{ fontSize: 40 }}>🛠️</ThemedText>
+      </ThemedView>
+
+      <ThemedText type="title">Service Details</ThemedText>
+      <ThemedText style={styles.description}>
+        This is where you would show more info about a specific booking or service in your app.
+      </ThemedText>
+
+      <Link href="/" dismissTo style={styles.button}>
+        <ThemedText style={styles.buttonText}>Got it, thanks!</ThemedText>
       </Link>
     </ThemedView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    padding: 20,
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-});
